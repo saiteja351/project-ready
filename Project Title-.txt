@@ -1,0 +1,194 @@
+Project Title: To Supply Leftover Food to the Poor
+
+Objective: The goal of this project is to leverage the Salesforce platform to create a system that coordinates leftover food donations, manages volunteers, and facilitates the delivery of surplus food to those in need.
+
+
+---
+
+Steps to Follow:
+
+1. Salesforce Developer Account Creation:
+
+Create a Salesforce developer account to access the platform's features for project setup.
+
+
+
+---
+
+2. Object Creation:
+
+Venue Object: To store information about the food donation venues.
+
+Drop-Off Point Object: To store details about food collection points.
+
+Task Object: To manage tasks related to food collection and distribution.
+
+Volunteer Object: To maintain records of volunteers involved in the project.
+
+Execution Details Object: To track execution specifics of food distribution efforts.
+
+
+
+---
+
+3. Tabs Creation:
+
+Definition of a Tab: A tab is a user interface element in Salesforce that allows users to create, view, and manage records for objects.
+
+Custom Tabs Creation:
+
+Create tabs for each of the above objects (Venue, Drop-Off Point, Task, Volunteer, Execution Details).
+
+
+
+
+---
+
+4. Lightning App Creation:
+
+App Name: FoodConnect
+
+Steps:
+
+Go to Setup > App Manager > New Lightning App.
+
+Set the app name as "FoodConnect."
+
+Add navigation items like Home, Venue, Drop-Off Point, Task, Volunteer, Execution Details, and Reports.
+
+Assign user profiles like "System Administrator."
+
+
+
+
+---
+
+5. Field Creation:
+
+Create relationship fields for objects like Venue, Drop-Off Point, Task, Volunteer, and Execution Details.
+
+Ensure that the necessary fields (e.g., Latitude, Longitude, Contact Email, and Phone) are created for each object.
+
+
+
+---
+
+6. Flow Creation:
+
+Create Flow for Venue Object:
+
+Navigate to Setup > Flow > New Flow > Screen Flow.
+
+Add the necessary components like Venue Name, Contact Email, Phone, Venue Location, Latitude, and Longitude.
+
+Save the flow as "Venue Form."
+
+
+
+
+---
+
+7. Trigger Creation:
+
+Create a Trigger for Drop-Off Point Object:
+
+Navigate to the developer console, create a new trigger named "DropOffTrigger" to calculate and assign the distance between drop-off points automatically.
+
+
+
+
+---
+
+8. Profiles Creation:
+
+NGO Profiles:
+
+Clone the standard user profile and create a custom "NGOs Profile" for the organizations.
+
+Create users for different NGOs (e.g., Iksha Foundation) and assign them the NGO profile.
+
+
+
+
+---
+
+9. Public Group Creation:
+
+Create public groups for the NGOs (e.g., Iksha Foundation, NSS, Street Cause) to manage sharing rules.
+
+
+
+---
+
+10. Report Types Creation:
+
+Custom Report Type:
+
+Create a custom report type with Venues, Drop-Off Points, and Volunteers.
+
+Add the necessary fields (Venue Name, Drop-Off Point Name, Volunteer Name) to the report.
+
+
+
+
+---
+
+11. Reports Creation:
+
+Venue with Drop-Off and Volunteers Report:
+
+Group by volunteer name and display details like Venue Name, Drop-Off Point Name, and Distance.
+
+
+Volunteers with Execution Details and Tasks Report:
+
+Add columns like Volunteer Name, Task Name, Execution Details, and Task Rating.
+
+
+
+
+---
+
+12. Dashboard Creation:
+
+Custom Dashboards:
+
+Create a dashboard for "Organization Details."
+
+Add a chart or table to display reports like Venue and Drop-Off Points or Volunteer Task reports.
+
+
+
+
+---
+
+13. Sharing Rules Creation:
+
+Sharing Rules:
+
+Create sharing rules to automatically share records with public groups based on the calculated distance from the drop-off points.
+
+Example: Share records where the distance is less than 15 with the Iksha group.
+
+
+
+
+---
+
+14. Home Page Creation:
+
+FoodConnect Home Page:
+
+Use Lightning App Builder to create a custom home page for the app.
+
+Add components like Venue Flow and Dashboard for easy access.
+
+
+
+
+---
+
+Conclusion:
+
+By utilizing the Salesforce platform, this project successfully created an organized system for managing food donations, coordinating with volunteers, and ensuring timely food distribution to those in need. The transparent, efficient system helps maximize the utilization of surplus food resources, effectively addressing food insecurity while supporting the community.
+
